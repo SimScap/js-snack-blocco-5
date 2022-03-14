@@ -181,3 +181,56 @@ animali = [
 
 
 
+ //   JS Snack E (homework)
+
+/**
+ *
+ *
+    Crea un array di oggetti che rappresentino delle persone.
+    Ogni persona ha un nome, un cognome e un'età.
+    
+    Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
+ */
+
+    lista = [
+    {
+        nome: 'Marco',
+        cognome:'Marchi',
+        età:'25',
+    },
+    {
+        nome: 'Matteo',
+        cognome:'Mattei',
+        età:'38',
+    },
+    {
+        nome: 'Simona',
+        cognome:'Simoni',
+        età:'16',
+    },
+    {
+        nome: 'Franca',
+        cognome:'Franchi',
+        età:'14',
+    },
+    {
+        nome: 'Alcolizzata',
+        cognome:'Di brutto',
+        età:'15',
+    },
+]
+
+const newList = lista.map((element) => {
+    
+    if (element.età >= 18){
+
+        element.frase = `${element.nome} + ${element.cognome} può guidare`;
+    } else{
+
+        element.frase = `${element.nome} + ${element.cognome} non può guidare`;
+    }
+    return element;
+});
+
+console.table(newList);
+
